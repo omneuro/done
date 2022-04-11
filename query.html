@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Customer Query</title>
+    <link rel="stylesheet" type="text/css" href="query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset ="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="menu-bar">
+      <h1><span id="first">Market</span><span id="second">Pro</span></h1>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./query.html">Customer Query</a></li>
+        <li>
+          <a href="#">Services<i class= "fas fa-caret-down"></i></a>
+
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="./service.html#top-b">Web Design</a></li>
+              <li><a href="./service.html#top-c">Graphic Design</a></li>
+              <li><a href="./service.html#top-d">Video Production</a></li>
+              <li><a href="/service.html#top-e">Marketing</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="form-container">
+      <form id="contact" action="mailto:ramondigitalneil@gmail.com" method="post" enctype="text/plain">
+        <h3>Customer Query Form</h3>
+        <fieldset>
+          <input type="text" name="Name" placeholder="Enter your Name">
+        </fieldset>
+        <fieldset>
+          <input type="number" name="Phone" placeholder="Enter your phone number">
+        </fieldset>
+        <fieldset>
+          <input type="email" name="Email" placeholder="Enter your email address">
+        </fieldset>
+        <fieldset>
+          <input type="checkbox" name="service1">
+          <label for="service1">Web Design</label><br>
+          <input type="checkbox" name="service2">
+          <label for="service2">Graphic Design</label><br>
+          <input type="checkbox" name="service3">
+          <label for = "service3">Video Production</label><br>
+          <input type="checkbox" name="service4">
+          <label for="service4">Marketing and Sales</label><br>
+        </fieldset>
+        <fieldset>
+          <textarea name="Description" placeholder="Enter your query discription here..."></textarea>
+        </fieldset>
+        <fieldset>
+          <button name="submit" type="submit" id="contact-submit">Submit</button>
+      </form>
+    </div>
+    <footer class="copyright">
+      <small>&copy; Copyright 2022, Marketpro. All Rights Reserved</small>
+    </footer>
+  </body>
+</html>

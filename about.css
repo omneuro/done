@@ -1,0 +1,189 @@
+/*Setting the colors for the html document*/
+:root{
+  --Granite_Grey: #5F6366;
+  --Cameo_Pink: #EDB5BF;
+  --UCLA_Blue: #4D6D9A;
+  --Simply_Posh: #86B3D1;
+  --Morning_Glory: #99CED3;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+    font-family: sans-serif;
+    background: var(--Simply_Posh);
+}
+
+/* styling for the menubar */
+.menu-bar{
+  background-color: var(--UCLA_Blue);
+  height:70px;
+  width:90%;
+  z-index: 999;/* This gives the menubar the highest z position in the html DOM*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  position:fixed; /*fixing the position in the html DOM, this with the z position gives the effect of a floating menu*/
+}
+
+/* styling for the logo */
+#first{
+  color: white;
+  font-size: 30px;
+}
+#second{
+  color: var(--Cameo_Pink);
+  font-size: 30px;
+}
+
+.menu-bar ul{
+  list-style: none;
+  display: flex; /*Displaying the unorder list as a flex container*/
+}
+
+.menu-bar ul li{
+  padding: 10px 30px; /*padding the x and y axis of the list elements in the nav bar*/
+  position: relative; /* List elements are positioned relative to their normal positions*/
+}
+
+/*setting the color and size of the menu items*/
+.menu-bar ul li a{
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+
+/*sets the color of the menu items to turguoise blue on hovering*/
+.menu-bar ul li a:hover{
+  color: var(--Simply_Posh);
+}
+
+/*removes the dropdown menu from viewport*/
+.dropdown-menu{
+  display: none;
+}
+
+/*reveals the dropdown menu when hovering over the list element 'DropMenu'*/
+.menu-bar ul li:hover .dropdown-menu{
+  display: block;/*Displaying menu as block items*/
+  position: absolute;/*positions the dropdown menu relative to the nearest positioned ancestor, i.e. the list item 'DropMenu'*/
+  left: 0;
+  top: 100%;
+  background-color: var(--UCLA_Blue);
+}
+
+.dropdown-menu ul{
+  display: block;
+  margin: 10px
+}
+
+.dropdown-menu ul li{
+  width: 150px;
+  padding: 10px;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+.column{
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0 ,0.2);
+  margin: 8px;
+}
+
+.about-section{
+  position: relative;
+  padding: 50px;
+  text-align: center;
+  background-color: var(--Granite_Grey);
+  color: white;
+}
+h2{
+  color: var(--Cameo_Pink);
+}
+
+.container{
+  padding: 0 16px;
+}
+
+.container::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.card img{
+  width: 352px;
+  height: 322px;
+}
+
+.title{
+  color: grey;
+}
+
+.button{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: var(--Morning_Glory);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover{
+  background-color: var(--Granite_Grey);
+}
+.map{
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-end: span 3;
+}
+.map h3{
+  text-align: center;
+}
+
+.map img{
+  height: 500px;
+  width: 800px;
+  position: relative;
+  left: 30%;
+  border: 3px solid var(--Granite_Grey)
+}
+
+.end{
+  background-color: var(--UCLA_Blue);
+  grid-row-start: 4;
+  grid-column-end: span 3;
+}
+
+.copyright{
+  background-color: var(--UCLA_Blue);
+  position: sticky;
+  width: 100%;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  bottom: 0;
+}

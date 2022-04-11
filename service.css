@@ -1,0 +1,226 @@
+:root{
+  --Granite_Grey: #5F6366;
+  --Cameo_Pink: #EDB5BF;
+  --UCLA_Blue: #4D6D9A;
+  --Simply_Posh: #86B3D1;
+  --Morning_Glory: #99CED3;
+}
+
+*{
+  margin: auto;
+  padding:0;
+}
+
+body{
+  font-family: sans serif;
+}
+
+/* styling for the menubar */
+.menu-bar{
+  background-color: var(--UCLA_Blue);
+  height:70px;
+  width:100%;
+  z-index: 999;/* This gives the menubar the highest z position in the html DOM*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  position:fixed; /*fixing the position in the html DOM, this with the z position gives the effect of a floating menu*/
+}
+
+#first{
+  color: white;
+  font-size: 30px;
+}
+#second{
+  color: var(--Cameo_Pink);
+  font-size: 30px;
+}
+
+.menu-bar h1{
+  position: relative;
+  left: -300px;
+}
+
+.menu-bar ul{
+  list-style: none;
+  display: flex; /*Displaying the unorder list as a flex container*/
+}
+
+.menu-bar ul li{
+  padding: 10px 30px; /*padding the x and y axis of the list elements in the nav bar*/
+  position: relative; /* List elements are positioned relative to their normal positions*/
+}
+
+/*setting the color and size of the menu items*/
+.menu-bar ul li a{
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+
+/*sets the color of the menu items to turguoise blue on hovering*/
+.menu-bar ul li a:hover{
+  color: var(--Granite_Grey);
+}
+
+/*removes the dropdown menu from viewport*/
+.dropdown-menu{
+  display: none;
+}
+
+/*reveals the dropdown menu when hovering over the list element 'DropMenu'*/
+.menu-bar ul li:hover .dropdown-menu{
+  display: block;/*Displaying menu as block items*/
+  position: absolute;/*positions the dropdown menu relative to the nearest positioned ancestor, i.e. the list item 'DropMenu'*/
+  left: 0;
+  top: 100%;
+  background-color: var(--UCLA_Blue);
+}
+
+.dropdown-menu ul{
+  display: block;
+  margin: 10px
+}
+
+.dropdown-menu ul li{
+  width: 150px;
+  padding: 10px;
+}
+.wrapper{
+  position:relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  top: 70px;
+}
+
+.wrapper div:nth-child(even){
+  background-color: var(--Morning_Glory)
+}
+
+.wrapper div:nth-child(odd){
+  background-color: var(--Granite_Grey)
+}
+
+.wrapper p{
+  font-size: 20px;
+}
+.section-a{
+  position: static;
+  height: 1000px;
+  width: 100%;
+}
+
+#top-a{
+  color: var(--Cameo_Pink);
+  position: absolute;
+  top: 100px;
+  left:750px;
+  right:0;
+  bottom:0;
+  margin: auto;
+}
+
+.section-a img{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:1100px;
+  margin: auto;
+}
+
+#bottom-a{
+  color: var(--Cameo_Pink);
+  position: absolute;
+  top: 850px;
+  left:680px;
+  right:0;
+  bottom:0;
+  margin: auto;
+}
+
+#top-b{
+  text-align: center;
+  color: var(--UCLA_Blue);
+}
+.section-b{
+  position: static;
+  /* background-color: var(--Cameo_Pink); */
+  height: 100%;
+  width: 100%;
+  top: 950px;
+}
+.section-b img{
+  position:relative;
+  length: 200px;
+  width: 400px;
+  float: left;
+}
+.section-b p{
+  position: static;
+}
+
+#top-c{
+  text-align: center;
+  color: var(--Cameo_Pink);
+}
+
+.section-c img{
+  position:relative;
+  length: 200px;
+  width: 400px;
+  float: right;
+}
+.section-c{
+  /* background-color: var(--Granite_Grey); */
+  position: static;
+  height: 100%;
+  width: 100%;
+}
+
+#top-d{
+  text-align: center;
+  color: var(--UCLA_Blue);
+}
+
+.section-d{
+  position: static;
+  /* background-color: var(--Cameo_Pink); */
+  height: 100%;
+  width: 100%;
+}
+.section-d img{
+  position:relative;
+  length: 300px;
+  width: 400px;
+  float: left;
+}
+
+#top-e{
+  text-align:center;
+  color: var(--Cameo_Pink);
+}
+.section-e{
+  position: static;
+  /* background-color: var(--Granite_Grey); */
+  height: 300px%;
+  width: 100%;
+}
+.section-e img{
+  position:relative;
+  length: 200px;
+  width: 400px;
+  float: right;
+}
+
+.copyright{
+  background-color: var(--UCLA_Blue);
+  position: fixed;
+  width: 100%;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  bottom: 0;
+}

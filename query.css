@@ -1,0 +1,179 @@
+:root{
+  --Granite_Grey: #5F6366;
+  --Cameo_Pink: #EDB5BF;
+  --UCLA_Blue: #4D6D9A;
+  --Simply_Posh: #86B3D1;
+  --Morning_Glory: #99CED3;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans serif;
+  background-color: var(--Simply_Posh)
+}
+
+/* styling for the menubar */
+.menu-bar{
+  background-color: var(--UCLA_Blue);
+  height:70px;
+  width:90%;
+  z-index: 999;/* This gives the menubar the highest z position in the html DOM*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  position:fixed; /*fixing the position in the html DOM, this with the z position gives the effect of a floating menu*/
+}
+
+/* styling for the logo */
+#first{
+  color: white;
+  font-size: 30px;
+}
+#second{
+  color: var(--Cameo_Pink);
+  font-size: 30px;
+}
+
+.menu-bar ul{
+  list-style: none;
+  display: flex; /*Displaying the unorder list as a flex container*/
+}
+
+.menu-bar ul li{
+  padding: 10px 30px; /*padding the x and y axis of the list elements in the nav bar*/
+  position: relative; /* List elements are positioned relative to their normal positions*/
+}
+
+/*setting the color and size of the menu items*/
+.menu-bar ul li a{
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+
+/*sets the color of the menu items to turguoise blue on hovering*/
+.menu-bar ul li a:hover{
+  color: var(--Granite_Grey);
+}
+
+/*removes the dropdown menu from viewport*/
+.dropdown-menu{
+  display: none;
+}
+
+/*reveals the dropdown menu when hovering over the list element 'DropMenu'*/
+.menu-bar ul li:hover .dropdown-menu{
+  display: block;/*Displaying menu as block items*/
+  position: absolute;/*positions the dropdown menu relative to the nearest positioned ancestor, i.e. the list item 'DropMenu'*/
+  left: 0;
+  top: 100%;
+  background-color: var(--UCLA_Blue);
+}
+
+.dropdown-menu ul{
+  display: block;
+  margin: 10px
+}
+
+.dropdown-menu ul li{
+  width: 150px;
+  padding: 10px;
+}
+
+.form-container{
+  position: relative;
+  top: 200px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+ #contact{
+  background-color: var(--Granite_Grey);
+  padding: 25px;
+  margin: 0 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3{
+  display: block;
+  color: var(--Cameo_Pink);
+  text-align: center;
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+fieldset{
+  border: medium none !important;
+  margin: 0 -10px 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+label{
+  color: var(--Cameo_Pink);
+}
+
+#contact input[type="text"],
+#contact input[type="number"],
+#contact input[type="email"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: white;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: var(--Morning_Glory);
+  color: #FFF;
+  margin: 0 10px 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: var(--Cameo_Pink);
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+.copyright{
+  background-color: var(--UCLA_Blue);
+  position: absolute;
+  width: 100%;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  bottom: 0;
+}
